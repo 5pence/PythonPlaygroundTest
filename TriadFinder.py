@@ -16,17 +16,16 @@ class TriadFinder:
     def __init__(self, number_array):
         self.number_array = number_array
 
-    def find_triad_product(self):
+    def find_triad_product(self, chosen_summed_amount=2020):
         self.number_array.sort()
-        target = 2020
         for i in range(len(self.number_array) - 2):
             left = i + 1
             right = len(self.number_array) - 1
             while left < right:
                 current_sum = self.number_array[i] + self.number_array[left] + self.number_array[right]
-                if current_sum == target:
+                if current_sum == chosen_summed_amount:
                     return self.number_array[i] * self.number_array[left] * self.number_array[right]
-                elif current_sum < target:
+                elif current_sum < chosen_summed_amount:
                     left += 1
                 else:
                     right -= 1

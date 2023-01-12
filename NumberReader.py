@@ -12,8 +12,8 @@ class NumberReader:
             lines = f.readlines()
             for line in lines:
                 try:
-                    num = int(line)
-                    self.numbers.append(num)
+                    number = int(line)
+                    self.numbers.append(number)
                 except ValueError:
                     print("Invalid whole number in file: " + line)
             return self.numbers
