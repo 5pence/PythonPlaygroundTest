@@ -9,8 +9,8 @@ class TriadFinder:
     number of digits in each element. That would have a O(elements * digits) -
     so would be five times quicker in this test instance as  200 elements of 4
     digits apiece (800 vs 40,000)
-    So given time I would a trie class and after reading the input txt determine
-    which algorthim would be appropriate (assuming I had plenty of memory processing
+    So given time I would add a trie class and after reading the input txt determine
+    which algorithm would be appropriate (assuming I had plenty of memory processing
     power).
     """
     def __init__(self, number_array):
@@ -23,7 +23,7 @@ class TriadFinder:
             left = i + 1
             right = len(self.number_array) - 1
             while left < right:
-                current_sum= self.number_array[i] + self.number_array[left] + self.number_array[right]
+                current_sum = self.number_array[i] + self.number_array[left] + self.number_array[right]
                 if current_sum == target:
                     return self.number_array[i] * self.number_array[left] * self.number_array[right]
                 elif current_sum < target:
