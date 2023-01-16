@@ -5,8 +5,3 @@
 - The numbers are unique whole numbers
 - To be OOP not functional
 
-## Constraints Problems
-- 
-### TODO
-- Test number 2b
-- Write Pytest tests
