@@ -29,12 +29,23 @@ if __name__ == '__main__':
     string_array = string_reader.read_n_constraint()
 
     # Problem 2a
-    validator = ConstraintChecker()
+    validator1 = ConstraintChecker()
     for string in string_array:
         elements = string.split(':')
-        validator.add_constraint(elements[0], elements[1])
+        validator1.add_constraint(elements[0], elements[1])
 
     print('========================')
-    print('Number of Valid Strings')
-    print(f'Answer: {validator.get_valid_count()}')
+    print('Number of Valid Strings 2a')
+    print(f'Answer: {validator1.get_valid_count()}')
+    print('========================\n')
+
+    # Problem 2b
+    validator2 = ConstraintChecker()
+    for string in string_array:
+        elements = string.split(':')
+        validator2.add_location_constraint(elements[0], elements[1])
+
+    print('========================')
+    print('Number of Valid Strings 2b')
+    print(f'Answer: {validator2.get_valid_count()}')
     print('========================\n')
